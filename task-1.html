@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(rgb(54, 166, 180),violet);
+        }
+        div{
+            border: 2px solid crimson;
+            width: 150px;
+            background-color: rgb(235, 203, 100);
+            border-radius: 30px;
+        }
+        h2{
+            text-align: center;
+            color: rgb(204, 28, 116);
+        }
+        ul li{
+            color:rgb(25, 22, 211);
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h2>Task-1</h2>
+
+    </div>
+    <script>
+        let main = document.getElementById("main");
+        let unorderedList = document.createElement("ul");
+        let arr = ["apple","banana","grape","watermelon","kiwi","strawberry"];
+     let result = arr.filter((element)=>element.length>5)
+     for(i=0;i<result.length;i++){
+     let list1 = document.createElement("li");
+     list1.innerHTML=result[i];
+     unorderedList.appendChild(list1);
+     main.appendChild(unorderedList);
+    }
+        document.body.appendChild(main);
+    </script>
+</body>
+</html>

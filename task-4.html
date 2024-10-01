@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(orange,navy);
+        }
+        div{
+            border: 2px solid;
+            width: 150px;
+            background-color: rgb(88, 235, 178);
+            clip-path: ellipse(80% 50%);
+        }
+        h2{
+            text-align: center;
+            color: royalblue;
+        }
+        ul{
+           color: rgb(8, 174, 216);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h2>Task-4</h2>
+    </div>
+    <script>
+        let main = document.getElementById("main");
+        let arr = ["dog","cat","bird","fish"];
+        let result = arr.map((element)=> element.split("").reverse().join(""));
+        let ul = document.createElement("ul");
+        for(i=0;i<result.length;i++){
+            let li = document.createElement("li");
+            li.innerHTML=result[i];
+            ul.appendChild(li)
+            main.appendChild(ul)
+        }
+        document.body.appendChild(main);
+        
+
+    </script>
+</body>
+</html>
